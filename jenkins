@@ -1,0 +1,17 @@
+pipeline{
+     agent any
+	 environment{
+	      DOCKER_TAG = getDockerTag()
+		  }
+			 stages{
+	    stages('Build Docker Image'){
+		   steps{
+		   sh "docker build -t gopikrishna5185/pipeline:v2"
+		   }
+		   }
+		   }
+		   }
+		   
+		   def getDockerTag(){
+		        def tag = sh script: 'git gopikrishna5185/pipeline HEAD', retirnStdout: true
+				}
