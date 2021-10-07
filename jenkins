@@ -13,5 +13,5 @@ pipeline{
 		   }
 		   
 		   def getDockerTag(){
-		        def tag = sh script: 'git gopikrishna5185/pipeline HEAD', retirnStdout: true
+		        def tag = sh script: 'git gopikrishna5185/pipeline HEAD', returnStdout: true
 				}
